@@ -1,5 +1,5 @@
 class Value:
-    def __init__(self, data, _children, _op='', label=''):
+    def __init__(self, data, _children=(), _op='', label=''):
         self.data = data
         self._prev = set(_children)
         self._op = _op
