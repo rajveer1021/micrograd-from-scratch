@@ -13,5 +13,9 @@ class Value:
         out = Value(self.data - other.data, (self, other), _op='-')
         return out
 
+    def __mul__(self, other):
+        out = Value(self.data * other.data, (self, other), _op='*')
+        return out
+
     def __repr__(self):
         return (f"Value(data={self.data}, label={self.label})")
