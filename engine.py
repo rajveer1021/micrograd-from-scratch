@@ -6,8 +6,12 @@ class Value:
         self.label = label
 
     def __add__(self, other):
-            out = Value(self.data + other.data, (self, other), _op='+')
-            return out
+        out = Value(self.data + other.data, (self, other), _op='+')
+        return out
+
+    def __sub__(self, other):
+        out = Value(self.data - other.data, (self, other), _op='-')
+        return out
 
     def __repr__(self):
         return (f"Value(data={self.data}, label={self.label})")
