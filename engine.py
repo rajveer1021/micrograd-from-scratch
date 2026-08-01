@@ -17,5 +17,9 @@ class Value:
         out = Value(self.data * other.data, (self, other), _op='*')
         return out
 
+    def relu(self):
+        out = Value(self.data if self.data > 0 else 0, (self,), _op="ReLU")
+        return out
+
     def __repr__(self):
         return (f"Value(data={self.data}, label={self.label})")
